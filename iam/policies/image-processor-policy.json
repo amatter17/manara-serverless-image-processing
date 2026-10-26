@@ -1,0 +1,29 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "ReadSourceImages",
+      "Effect": "Allow",
+      "Action": "s3:GetObject",
+      "Resource": "arn:aws:s3:::manara-image-source-serverless-image-processing-10-2026/*"
+    },
+    {
+      "Sid": "WriteProcessedImages",
+      "Effect": "Allow",
+      "Action": "s3:PutObject",
+      "Resource": "arn:aws:s3:::manara-image-processed-serverless-image-processing-10-2026/*"
+    },
+    {
+      "Sid": "WriteMetadata",
+      "Effect": "Allow",
+      "Action": "dynamodb:PutItem",
+      "Resource": "arn:aws:dynamodb:us-east-1:223663280345:table/manara-image-metadata"
+    },
+    {
+      "Sid": "PublishNotifications",
+      "Effect": "Allow",
+      "Action": "sns:Publish",
+      "Resource": "arn:aws:sns:us-east-1:223663280345:manara-image-processing-notifications"
+    }
+  ]
+}

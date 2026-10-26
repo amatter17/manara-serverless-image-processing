@@ -1,0 +1,25 @@
+# AWS credentials
+.aws/
+credentials
+*.pem
+*.key
+
+# Temporary files
+*.zip
+*.log
+*.tmp
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Sensitive images and data
+*.jpg
+*.jpeg
+*.png
+*.webp
+
+# Pre-signed URLs and API responses
+*presigned*response*.json
+upload-response.json
